@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Volume Booster</title>
+    <style>
+      body { font: 14px system-ui, sans-serif; margin: 12px; width: 240px; }
+      .row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+      input[type="range"] { width: 100%; }
+      button { width: 100%; padding: 8px; cursor: pointer; }
+      .hint { color: #555; font-size: 12px; margin-top: 8px; line-height: 1.3; }
+      .value { font-variant-numeric: tabular-nums; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div>Boost</div>
+      <div class="value" id="pct">100%</div>
+    </div>
+    <input id="slider" type="range" min="0" max="600" step="1" value="100" />
+    <div style="height:10px"></div>
+    <button id="toggle">Enable on this tab</button>
+    <div class="hint">
+      Enable จะเริ่ม “จับเสียงแท็บนี้” แล้วบูสต์ผ่าน WebAudio (Gain). ปรับได้ 0–200%.
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
